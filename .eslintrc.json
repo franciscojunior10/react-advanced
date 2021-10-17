@@ -29,6 +29,13 @@
     "prettier"
   ],
   "rules": {
+    "react/prefer-stateless-function": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "react/destructuring-assignment": "off",
+    "@typescript-eslint/ban-types": "off",
+    "react/static-property-placement": "off",
+    "react/forbid-prop-types": "off",
+    "react/require-default-props": "off",
     "no-use-before-define": "off",
     "camelcase": "off",
     "prettier/prettier": "error",
@@ -45,7 +52,7 @@
     "@typescript-eslint/no-use-before-define": "off",
     "react/react-in-jsx-scope": "off",
     "@typescript-eslint/explicit-function-return-type": [
-      "warn",
+      "off",
       {
         "allowExpressions": true
       }

@@ -1,26 +1,49 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Component } from 'react';
+import { Twitter } from './Twitter';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component<{}, { loading: boolean; actived: boolean }> {
+  constructor(props: any) {
+    super(props);
+    this.state = { loading: false, actived: true };
+  }
+
+  componentDidMount() {
+    setTimeout(() => {
+      this.setState({
+        loading: true,
+      });
+    }, 3000);
+  }
+
+  onRemove = () => {
+    this.setState({
+      actived: false,
+    });
+  };
+
+  render() {
+    const posts = [
+      {
+        title: 'x1',
+        description: 'x2',
+      },
+      {
+        title: 'y1',
+        dexcription: 'y2',
+      },
+    ];
+
+    return (
+      <>
+        <button type="button" onClick={this.onRemove}>
+          Remover componente
+        </button>
+        {this.state.actived && (
+          <Twitter posts={posts} loading={this.state.loading} />
+        )}
+      </>
+    );
+  }
 }
 
-export default App;
+export { App };
