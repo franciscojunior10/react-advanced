@@ -1,5 +1,5 @@
 import { Component } from 'react';
-import { Twitter } from './Twitter';
+import { Twitter } from './classTwitter';
 
 class App extends Component<{}, { loading: boolean; actived: boolean }> {
   constructor(props: any) {
@@ -29,7 +29,7 @@ class App extends Component<{}, { loading: boolean; actived: boolean }> {
       },
       {
         title: 'y1',
-        dexcription: 'y2',
+        description: 'y2',
       },
     ];
 

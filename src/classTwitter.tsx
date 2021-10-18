@@ -51,12 +51,12 @@ class Twitter extends Component<TwitterProps, { tweet: boolean }> {
     console.log('render', posts);
 
     return (
-      <h1>
-        teste
+      <>
         <button type="button" onClick={this.tweet}>
           Re-render
         </button>
-      </h1>
+        <h1>teste</h1>
+      </>
     );
   }
 }
