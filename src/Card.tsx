@@ -19,7 +19,7 @@ const Card: FC = () => {
           color: theme.primary.color,
         }}
       >
-        Card Button 123
+        Card Button
       </button>
     </div>
   );
